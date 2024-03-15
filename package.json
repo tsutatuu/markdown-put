@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "tsutatuu",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/jsdom": "^21.1.6",
     "@types/markdown-it": "^12.2.3",
@@ -30,5 +30,13 @@
     "markdown-it-front-matter": "^0.2.3",
     "puppeteer": "^20.9.0",
     "yargs": "^17.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsutatuu/markdown-put.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tsutatuu/markdown-put/issues"
+  },
+  "homepage": "https://github.com/tsutatuu/markdown-put#readme"
 }
