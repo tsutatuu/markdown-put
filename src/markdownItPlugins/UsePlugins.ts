@@ -3,7 +3,6 @@ import MarkdownItContainer from "markdown-it-container";
 import Token from "markdown-it/lib/token";
 import { ImageRule } from "./ImageRule";
 import { ParseFrontMatter } from "./ParseFrontMatter";
-import StateCore from "markdown-it/lib/rules_core/state_core";
 import { DakutenRule } from "./DakutenRule";
 
 export const UsePlugins = (md: MarkdownIt) => {
