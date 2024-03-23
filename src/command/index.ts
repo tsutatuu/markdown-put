@@ -26,7 +26,7 @@ const main = async () => {
     isPreview = true;
   }
 
-  const md = new MarkdownIt();
+  const md = new MarkdownIt({ html: true });
   UsePlugins(md);
 
   const dirPath = path.dirname(argv.md);

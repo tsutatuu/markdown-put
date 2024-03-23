@@ -3,6 +3,7 @@ import MarkdownItContainer from "markdown-it-container";
 import Token from "markdown-it/lib/token";
 import { ImageRule } from "./ImageRule";
 import { ParseFrontMatter } from "./ParseFrontMatter";
+import { DakutenRule } from "./DakutenRule";
 
 export const UsePlugins = (md: MarkdownIt) => {
   md.use(ParseFrontMatter);
@@ -33,6 +34,6 @@ export const UsePlugins = (md: MarkdownIt) => {
     },
   });
 
-  // image
   md.use(ImageRule);
+  md.use(DakutenRule);
 };

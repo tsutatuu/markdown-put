@@ -66,6 +66,14 @@ const FrontMatterCss = (frontMatter: FrontMatterType) => {
         background-position: center center;
         overflow:hidden;
     }
+
+    
+    .dakuten::after {
+      content: "゛";
+      position: absolute;
+      font-size: 1em;
+      transform: translateX(0.3em) translateY(-1.3em);
+    }
 </style>
 `;
 
