@@ -72,7 +72,7 @@ const FrontMatterCss = (frontMatter: FrontMatterType) => {
       content: "゛";
       position: absolute;
       font-size: 1em;
-      transform: translateX(0.3em) translateY(-1.3em);
+      ${writing_mode === "vertical-rl" ? "transform: translateX(0.3em) translateY(-1.3em);" : "transform: translateX(-0.3em) translateY(-0.3em);"}
     }
 </style>
 `;
