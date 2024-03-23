@@ -3,6 +3,7 @@ import MarkdownItContainer from "markdown-it-container";
 import Token from "markdown-it/lib/token";
 import { ImageRule } from "./ImageRule";
 import { ParseFrontMatter } from "./ParseFrontMatter";
+import StateCore from "markdown-it/lib/rules_core/state_core";
 
 export const UsePlugins = (md: MarkdownIt) => {
   md.use(ParseFrontMatter);
@@ -35,4 +36,13 @@ export const UsePlugins = (md: MarkdownIt) => {
 
   // image
   md.use(ImageRule);
+
+  md.renderer.rules.text = (tokens: Token[], idx: number) => {
+    const token = tokens[idx];
+    const regex = /(.)(゛)/g;
+    const replaced = token.content.replace(regex, (_match, p1) => {
+      return `<span class="dakuten">${p1}</span>`;
+    });
+    return replaced;
+  };
 };
